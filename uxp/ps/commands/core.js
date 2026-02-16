@@ -320,10 +320,21 @@ const generateImage = async (command) => {
                         gi_SIMILARITY: 0,
                     },
                 },
+                serviceVersion: "nano_banana",
                 workflow: "text_to_image",
                 workflowType: {
                     _enum: "genWorkflow",
                     _value: "text_to_image",
+                },
+                workflow_to_active_service_identifier_map: {
+                    "gen_harmonize": "gen_harmonize",
+                    "generate_background": "nano_banana",
+                    "generate_similar": "nano_banana",
+                    "generativeUpscale": "clio_f16_async",
+                    "in_painting": "nano_banana",
+                    "instruct_edit": "null",
+                    "out_painting": "nano_banana",
+                    "text_to_image": "nano_banana"
                 },
             },
             // Rasterize current layer
@@ -421,20 +432,20 @@ const generativeFill = async (command) => {
 
                     }
                 },
-                "serviceVersion": "clio3",
+                "serviceVersion": "nano_banana",
                 "workflowType": {
                     "_enum": "genWorkflow",
                     "_value": "in_painting"
                 },
                 "workflow_to_active_service_identifier_map": {
-                    "gen_harmonize": "clio3",
-                    "generate_background": "clio3",
-                    "generate_similar": "clio3",
-                    "generativeUpscale": "fal_aura_sr",
-                    "in_painting": "clio3",
-                    "instruct_edit": "clio3",
-                    "out_painting": "clio3",
-                    "text_to_image": "clio3"
+                    "gen_harmonize": "gen_harmonize",
+                    "generate_background": "nano_banana",
+                    "generate_similar": "nano_banana",
+                    "generativeUpscale": "clio_f16_async",
+                    "in_painting": "nano_banana",
+                    "instruct_edit": "null",
+                    "out_painting": "nano_banana",
+                    "text_to_image": "nano_banana"
                 }
             }
         ];
