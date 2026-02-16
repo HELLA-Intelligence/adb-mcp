@@ -469,7 +469,8 @@ const closeDocument = async (command) => {
             await app.activeDocument.save();
         }
 
-        await app.activeDocument.close();
+        // Pass DONOTSAVECHANGES to suppress the "Save changes?" dialog
+        await app.activeDocument.close(constants.SaveOptions.DONOTSAVECHANGES);
     });
 };
 
