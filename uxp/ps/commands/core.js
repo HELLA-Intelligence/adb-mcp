@@ -460,6 +460,19 @@ const generativeFill = async (command) => {
     });
 };
 
+const closeDocument = async (command) => {
+    await execute(async () => {
+        const options = command.options || {};
+        const save = options.save !== undefined ? options.save : false;
+
+        if (save) {
+            await app.activeDocument.save();
+        }
+
+        await app.activeDocument.close();
+    });
+};
+
 const saveDocument = async (command) => {
     await execute(async () => {
         await app.activeDocument.save();
@@ -555,6 +568,7 @@ const commandHandlers = {
     removeBackground,
     alignContent,
     generateImage,
+    closeDocument,
     saveDocument,
     saveDocumentAs,
     createDocument,

@@ -215,8 +215,23 @@ def save_document_as(file_path: str, file_type: str = "PSD"):
 def save_document():
     """Saves the current Photoshop Document
     """
-    
+
     command = createCommand("saveDocument", {
+    })
+
+    return sendCommand(command)
+
+@mcp.tool()
+def close_document(save: bool = False):
+    """Closes the current active Photoshop document.
+
+    Args:
+        save (bool, optional): Whether to save the document before closing. Defaults to False.
+            Set to True to save before closing, False to close without saving.
+    """
+
+    command = createCommand("closeDocument", {
+        "save": save
     })
 
     return sendCommand(command)
