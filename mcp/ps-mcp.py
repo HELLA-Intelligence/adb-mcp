@@ -560,24 +560,14 @@ def generate_image(
     prompt:str,
     content_type:str = "none"
 ):
-    """Uses Adobe Firefly Generative AI to generate an image on a new layer with the specified layer name.
-
-    If there is an active selection, it will use that region for the generation. Otherwise it will generate
-    on the entire layer.
+    """DISABLED. Do NOT use this tool. Use generative_fill instead for all image generation.
 
     Args:
-        layer_name (str): Name for the layer that will be created and contain the generated image
-        prompt (str): Prompt describing the image to be generated
-        content_type (str): The type of image to be generated. Options include "photo", "art" or "none" (default)
+        layer_name (str): Unused
+        prompt (str): Unused
+        content_type (str): Unused
     """
-    
-    command = createCommand("generateImage", {
-        "layerName":layer_name,
-        "prompt":prompt,
-        "contentType":content_type
-    })
-
-    return sendCommand(command)
+    return {"error": "generate_image is disabled. Use generative_fill instead. Call select_rectangle first to create a selection, then call generative_fill."}
 
 @mcp.tool()
 def generative_fill(
