@@ -873,13 +873,13 @@ const harmonizeLayer = async (command) => {
                 },
                 "workflow_to_active_service_identifier_map": {
                     "gen_harmonize": "gen_harmonize",
-                    "generate_background": "clio3",
-                    "generate_similar": "clio3",
+                    "generate_background": "nano_banana",
+                    "generate_similar": "nano_banana",
                     "generativeUpscale": "fal_aura_sr",
                     "in_painting": "gen_harmonize",
-                    "instruct_edit": "clio3",
-                    "out_painting": "clio3",
-                    "text_to_image": "clio3"
+                    "instruct_edit": "nano_banana",
+                    "out_painting": "nano_banana",
+                    "text_to_image": "nano_banana"
                 }
             },
 

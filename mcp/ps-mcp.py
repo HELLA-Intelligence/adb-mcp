@@ -554,20 +554,9 @@ def set_layer_visibility(
     return sendCommand(command)
 
 
-@mcp.tool()
-def generate_image(
-    layer_name:str,
-    prompt:str,
-    content_type:str = "none"
-):
-    """DISABLED. Do NOT use this tool. Use generative_fill instead for all image generation.
-
-    Args:
-        layer_name (str): Unused
-        prompt (str): Unused
-        content_type (str): Unused
-    """
-    return {"error": "generate_image is disabled. Use generative_fill instead. Call select_rectangle first to create a selection, then call generative_fill."}
+# generate_image REMOVED — was using Firefly Image 3.
+# Use generative_fill instead (routed to nano_banana/Gemini).
+# Decorator removed so this function is invisible to MCP clients.
 
 @mcp.tool()
 def generative_fill(
